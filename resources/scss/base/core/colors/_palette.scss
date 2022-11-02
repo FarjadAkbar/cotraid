@@ -2,14 +2,14 @@
 //   File Name: pallette.scss
 //   Description: Custom color system styles, includes background, border and text colors
 //   ----------------------------------------------------------------------------------------------
-//   Item Name: Vuexy - Vuejs, React, Angular, HTML & Laravel Admin Dashboard Template
-//   Author: PIXINVENT
-//   Author URL: http://www.themeforest.net/user/pixinvent
+//   Item Name: cotriad.ai - AI powered Digital Signange Platform
+//   Author: COTRIAD
+//   Author URL: http://www.cotriad.ai
 // ================================================================================================
 
 //  ================================================================================================
 //  WARNING: PLEASE DO NOT CHANGE THIS VARIABLE FILE.
-//  THIS FILE WILL GET OVERWRITTEN WITH EACH Vuexy HTML TEMPLATE RELEASE.
+//  THIS FILE WILL GET OVERWRITTEN WITH EACH Cotriad HTML TEMPLATE RELEASE.
 //  TIP:
 //  We suggest you to use this (assets/scss/colors/palette.scss) file for overriding color variables.
 //  ================================================================================================
@@ -89,8 +89,9 @@
 
           .fc-list-event-dot,
           .fc-daygrid-event-dot {
-            border-color: $color_value !important;
+             border-color: $color_value !important;
           }
+
 
           &.fc-list-event {
             &:hover td {

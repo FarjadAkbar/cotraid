@@ -28,21 +28,21 @@ Route::group(['prefix' => 'auth'], function () {
     Route::post('register', [AuthController::class, 'register']);
 
     Route::group(['middleware' => 'auth:api'], function () {
-        Route::post('logout', [AuthController::class, 'logout']);
-        Route::get('user', [AuthController::class, 'user']);
-    });
-    // Permissions
-    Route::post('userpermission/{id}', [AuthController::class, 'userpermission']);
-    Route::post('userrole/{id}', [AuthController::class, 'userrole']);
-    Route::post('rolepermission/{id}', [RoleController::class, 'rolepermission']);
+      Route::post('logout', [AuthController::class, 'logout']);
+      Route::get('user', [AuthController::class, 'user']);
 
+      // Permissions
+      Route::post('userpermission/{id}', [AuthController::class, 'userpermission']);
+      Route::post('userrole/{id}', [AuthController::class, 'userrole']);
+      Route::post('rolepermission/{id}', [RoleController::class, 'rolepermission']);
 
-    // Get Permission
+      // Get Permission
     Route::get('getpermission/{id}', [RoleController::class, 'getpermission']);
 
-    // Crud
-    Route::resource('permission', PermissionController::class);
-    Route::resource('role', RoleController::class);
+      // Crud
+      Route::resource('permission', PermissionController::class);
+      Route::resource('role', RoleController::class);
+  });
 });
 // Route::get('abilities', function(Request $request){
 //     return $request->user()->roles()->with('permission')

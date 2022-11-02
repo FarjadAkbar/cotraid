@@ -9,10 +9,11 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Support\Str;
 use App\Traits\HasPermissionTrait;
+use App\Traits\UUID;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable, HasPermissionTrait;
+    use HasApiTokens, HasFactory, Notifiable, HasPermissionTrait, UUID;
 
     protected $guarded = [
         'id',
@@ -65,9 +66,6 @@ class User extends Authenticatable
             $user->id = Str::uuid();
         });
     }
-
-
-
 
 
 

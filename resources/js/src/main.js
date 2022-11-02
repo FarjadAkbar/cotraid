@@ -20,11 +20,9 @@ import '@/libs/sweet-alerts'
 import '@/libs/vue-select'
 import '@/libs/tour'
 
-
 // BSV Plugin Registration
 Vue.use(ToastPlugin)
 Vue.use(ModalPlugin)
-
 
 // Composition API
 Vue.use(VueCompositionAPI)

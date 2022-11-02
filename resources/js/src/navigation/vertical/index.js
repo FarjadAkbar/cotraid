@@ -14,14 +14,4 @@ export default [
     route: 'roles',
     icon: 'FileIcon',
   },
-  {
-    title: 'Permissions',
-    route: 'permissions',
-    icon: 'FileIcon',
-  },
-  {
-    title: 'Assign Permission',
-    route: 'assign-permission',
-    icon: 'FileIcon',
-  },
 ]

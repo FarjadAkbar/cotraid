@@ -44,7 +44,7 @@ const routesTest = [
   {
     path: '/permissions',
     name: 'permissions',
-    component: () => import(/* webpackChunkName: "roles" */ '@/views/Permissions.vue'),
+    component: () => import(/* webpackChunkName: "permissions" */ '@/views/Permissions.vue'),
     meta: {
       pageTitle: 'Permissions',
       breadcrumb: [
@@ -56,20 +56,20 @@ const routesTest = [
     },
   },
 
-  {
-    path: '/assign-permission',
-    name: 'assign-permission',
-    component: () => import(/* webpackChunkName: "roles" */ '@/views/AssignPermission.vue'),
-    meta: {
-      pageTitle: 'Assign Permission',
-      breadcrumb: [
-        {
-          text: 'Assign Permission',
-          active: true,
-        },
-      ],
-    },
-  },
+  // {
+  //   path: '/assign-permission',
+  //   name: 'assign-permission',
+  //   component: () => import(/* webpackChunkName: "assignPermission" */ '@/views/AssignPermission.vue'),
+  //   meta: {
+  //     pageTitle: 'Assign Permission',
+  //     breadcrumb: [
+  //       {
+  //         text: 'Assign Permission',
+  //         active: true,
+  //       },
+  //     ],
+  //   },
+  // },
 ]
 
 export default routesTest

@@ -140,7 +140,8 @@ export default {
   },
   data() {
     return {
-      userData: localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : '',
+      // userData: JSON.parse(localStorage.getItem('userData')),
+      userData: localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : null,
       avatarText,
     }
   },

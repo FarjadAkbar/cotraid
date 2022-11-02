@@ -87,6 +87,7 @@
 <script>
 import { onUnmounted, onMounted } from '@vue/composition-api'
 import store from '@/store/index'
+// import { useRouter } from 'vue-router'
 import axios from 'axios'
 import AppNavbarVerticalLayout from '@core/layouts/components/app-navbar/AppNavbarVerticalLayout.vue'
 import AppFooter from '@core/layouts/components/AppFooter.vue'
@@ -98,7 +99,6 @@ import LayoutContentRendererLeftDetached from '@core/layouts/components/layout-c
 import VerticalNavMenu from './components/vertical-nav-menu/VerticalNavMenu.vue'
 import useVerticalLayout from './useVerticalLayout'
 import mixinVerticalLayout from './mixinVerticalLayout'
-
 
 export default {
   components: {
@@ -123,13 +123,14 @@ export default {
   created() {
     axios.get('/api/auth/user')
       .then((response) => {
+        // localStorage.setItem('userData.name', response.data.name)
+        // localStorage.setItem('userData.email', response.data.email)
         localStorage.setItem('userData', JSON.stringify(response.data))
       })
       .catch((error) => {
-        console.log("error..." + error);
-        // if (error.response.status === 401) {
-          // this.$router.push('/signin')
-        // }
+        if (error.response.status === 401) {
+          this.$router.push('/signin')
+        }
       })
   },
   setup() {

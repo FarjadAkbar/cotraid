@@ -37,7 +37,7 @@ class PermissionMiddleware
         //         });
         //     }
         // }
-        
+
                 return $next($request);
     }
 }

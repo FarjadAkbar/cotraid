@@ -22,13 +22,14 @@ class Authenticate extends Middleware
 
     public function handle($request, Closure $next, ...$guards)
     {
-        // apply token header to the incomming request
-        if ($cotriadToken = $request->cookie('cotriadToken')) {
-            $request->headers->set('Authorization', 'Bearer ' . $cotriadToken);
-        }
+      // apply token header to the incomming request
 
-        $this->authenticate($request, $guards);
+      if($cotriadToken = $request->cookie('cotriadToken')){
+        $request->headers->set(key:'Authorization', values:'Bearer ' . $cotriadToken);
+      }
 
-        return $next($request);
+      $this->authenticate($request, $guards);
+
+      return $next($request);
     }
 }

@@ -19830,9 +19830,9 @@ select:-webkit-autofill {
     Description: Contain header navigation bar, vertical main navigation bar and
     horiznotal main navigation bar related SCSS.
     ----------------------------------------------------------------------------------------------
-    Item Name: Vuexy - Vuejs, React, Angular, HTML & Laravel Admin Dashboard Template
-    Author: PIXINVENT
-    Author URL: http://www.themeforest.net/user/pixinvent
+    Item Name: cotriad.ai - AI powered Digital Signange Platform
+    Author: COTRIAD
+    Author URL: http://www.cotriad.ai
 ================================================================================================*/
 
 .header-navbar {
@@ -21974,9 +21974,9 @@ select:-webkit-autofill {
   File Name: progress.scss
   Description: Extended bootstrap progress bar scss.
   ----------------------------------------------------------------------------------------
-  Item Name: Vuexy - Vuejs, React, Angular, HTML & Laravel Admin Dashboard Template
-  Author: PIXINVENT
-  Author URL: http://www.themeforest.net/user/pixinvent
+  Item Name: cotriad.ai - AI powered Digital Signange Platform
+  Author: COTRIAD
+  Author URL: http://www.cotriad.ai
   ----------------------------------------------------------------------------------------
 ==========================================================================================*/
 
@@ -21998,9 +21998,9 @@ select:-webkit-autofill {
   File Name: list-group.scss
   Description: Contain list item, list group related extended SCSS.
   ----------------------------------------------------------------------------------------------
-  Item Name: Vuexy - Vuejs, React, Angular, HTML & Laravel Admin Dashboard Template
-  Author: PIXINVENT
-  Author URL: http://www.themeforest.net/user/pixinvent
+  Item Name: cotriad.ai - AI powered Digital Signange Platform
+  Author: COTRIAD
+  Author URL: http://www.cotriad.ai
 ================================================================================================*/
 
 ul.list-inline li {
@@ -31438,9 +31438,9 @@ html[dir] .pace .pace-progress {
     File Name: sidebar.scss
     Description: content sidebar specific scss.
     ----------------------------------------------------------------------------------------
-    Item Name: Vuexy - Vuejs, React, Angular, HTML & Laravel Admin Dashboard Template
-    Author: PIXINVENT
-    Author URL: http://www.themeforest.net/user/pixinvent
+    Item Name: cotriad.ai - AI powered Digital Signange Platform
+    Author: COTRIAD
+    Author URL: http://www.cotriad.ai
 ==========================================================================================*/
 
 .sidebar {
@@ -31643,9 +31643,9 @@ footer.footer-shadow {
     File Name: navigation.scss
     Description: Common mixin for menus, contain dark and light version scss.
     ----------------------------------------------------------------------------------------
-    Item Name: Vuexy - Vuejs, React, Angular, HTML & Laravel Admin Dashboard Template
-    Author: PIXINVENT
-    Author URL: http://www.themeforest.net/user/pixinvent
+    Item Name: cotriad.ai - AI powered Digital Signange Platform
+    Author: COTRIAD
+    Author URL: http://www.cotriad.ai
 ==========================================================================================*/
 
 .main-menu {
@@ -32856,9 +32856,9 @@ footer.footer-shadow {
 	File Name: search.scss
 	Description: Search  functionality.
 	----------------------------------------------------------------------------------------
-	Item Name: Vuexy - Vuejs, React, Angular, HTML & Laravel Admin Dashboard Template
-	Author: PIXINVENT
-	Author URL: http://www.themeforest.net/user/pixinvent
+	Item Name: cotriad.ai - AI powered Digital Signange Platform
+	Author: COTRIAD
+	Author URL: http://www.cotriad.ai
 ==========================================================================================*/
 
 [dir=ltr] .navbar-container a.nav-link-search {
@@ -35054,9 +35054,9 @@ footer.footer-shadow {
     File Name: demo.scss
     Description: CSS used for demo purpose only. Remove this css from your project.
     ----------------------------------------------------------------------------------------
-    Item Name: Vuexy - Vuejs, React, Angular, HTML & Laravel Admin Dashboard Template
-    Author: PIXINVENT
-    Author URL: http://www.themeforest.net/user/pixinvent
+    Item Name: cotriad.ai - AI powered Digital Signange Platform
+    Author: COTRIAD
+    Author URL: http://www.cotriad.ai
 ==========================================================================================*/
 
 .demo-inline-spacing {
@@ -35231,9 +35231,9 @@ footer.footer-shadow {
 	File Name: customizer.scss
 	Description: CSS used for demo purpose only. Remove this css from your project.
 	----------------------------------------------------------------------------------------
-	Item Name: Vuexy - Vuejs, React, Angular, HTML & Laravel Admin Dashboard Template
-	Author: PIXINVENT
-	Author URL: http://www.themeforest.net/user/pixinvent
+	Item Name: cotriad.ai - AI powered Digital Signange Platform
+	Author: COTRIAD
+	Author URL: http://www.cotriad.ai
 ==========================================================================================*/
 
 .customizer {
@@ -36286,6 +36286,11 @@ div.dataTables_wrapper .dt-button-collection > div[role=menu] {
 
 div.dataTables_wrapper .dt-button-collection [class*=buttons-]:focus {
   outline: 0;
+}
+
+table.dataTable.dtr-column > tbody > tr > td.control:before,
+table.dataTable.dtr-column > tbody > tr > th.control:before {
+  line-height: 16px;
 }
 
 [dir] div.dataTables_wrapper div.dataTables_filter label, [dir] div.dataTables_wrapper div.dataTables_length label {

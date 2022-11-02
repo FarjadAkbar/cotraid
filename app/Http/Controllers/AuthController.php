@@ -16,48 +16,48 @@ use Symfony\Component\HttpFoundation\response;
 
 class AuthController extends Controller
 {
-  /**
-   * Create user
-   *
-   * @param  [string] name
-   * @param  [string] email
-   * @param  [string] password
-   * @param  [string] password_confirmation
-   * @return [string] message
-   */
-  public function register(Request $request)
-  {
-    $request->validate([
-      'name' => 'required|string',
-      'email' => 'required|string|email|unique:users',
-      'password' => 'required|string|',
-      'c_password' => 'required|same:password',
-    ]);
+    /**
+    * Create user
+    *
+    * @param  [string] name
+    * @param  [string] email
+    * @param  [string] password
+    * @param  [string] password_confirmation
+    * @return [string] message
+    */
+    public function register(Request $request)
+    {
+      $request->validate([
+        'name' => 'required|string',
+        'email' => 'required|string|email|unique:users',
+        'password' => 'required|string|',
+        'c_password' => 'required|same:password',
+      ]);
 
-    $user = new User([
-      'name' => $request->name,
-      'email' => $request->email,
-      'password' => bcrypt($request->password)
-    ]);
-    if ($user->save()) {
-      return response([
-        'message' => 'Successfully created user!'
-      ], 201);
-    } else {
-      return response(['error' => 'Provide proper details'], 401);
+      $user = new User([
+        'name' => $request->name,
+        'email' => $request->email,
+        'password' => bcrypt($request->password)
+      ]);
+      if ($user->save()) {
+        return response([
+          'message' => 'Successfully created user!'
+        ], 201);
+      } else {
+        return response(['error' => 'Provide proper details'], 401);
+      }
     }
-  }
 
-  /**
-   * Login user and create token
-   *
-   * @param  [string] email
-   * @param  [string] password
-   * @param  [boolean] remember_me
-   * @return [string] access_token
-   * @return [string] token_type
-   * @return [string] expires_at
-   */
+      /**
+  * Login user and create token
+  *
+  * @param  [string] email
+  * @param  [string] password
+  * @param  [boolean] remember_me
+  * @return [string] access_token
+  * @return [string] token_type
+  * @return [string] expires_at
+  */
   public function login(Request $request)
   {
     $request->validate([
@@ -84,7 +84,7 @@ class AuthController extends Controller
 
     return response([
       'cotriadToken' => $tokenResult->accessToken,
-    ])->withcookie($cookie);
+    ], status:201)->withcookie($cookie);
 
     // return response([
     //   'access_token' => $tokenResult->accessToken,
@@ -96,31 +96,20 @@ class AuthController extends Controller
   }
 
   /**
-   * Get the authenticated User
-   *
-   * @return [json] user object
-   */
-
-
-  
+  * Get the authenticated User
+  *
+  * @return [json] user object
+  */
   public function user(Request $request)
   {
-    // if (!Auth::user()->can('user')) abort(403);
-    $user = $request->user();
-    $permissions = $user->with('roles.permissions')->get();
-    $ability =  [
-                  ["roles", "user-permission"]
-                ];
-
-   
-    return response($user, 200);
+    return response($request->user());
   }
 
   /**
-   * Logout user (Revoke the token)
-   *
-   * @return [string] message
-   */
+  * Logout user (Revoke the token)
+  *
+  * @return [string] message
+  */
   public function logout(Request $request)
   {
     $request->user()->token()->revoke();
